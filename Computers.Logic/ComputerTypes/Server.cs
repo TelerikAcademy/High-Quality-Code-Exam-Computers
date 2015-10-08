@@ -1,9 +1,10 @@
 ﻿namespace Computers.Logic.ComputerTypes
 {
-    using VideoCards;
-    using Cpus;
     using System.Collections.Generic;
+
+    using Cpus;
     using HardDrives;
+    using VideoCards;
 
     public class Server : Computer
     {

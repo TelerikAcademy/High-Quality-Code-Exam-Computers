@@ -7,6 +7,7 @@
     public class RaidArray : HardDrive
     {
         private List<HardDrive> hardDrives;
+
         internal RaidArray(List<HardDrive> hardDrives)
         {
             this.hardDrives = hardDrives;

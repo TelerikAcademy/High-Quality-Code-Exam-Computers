@@ -11,7 +11,7 @@ Design pattern: Abstract factory
 	* Introduced IComputersFactory as a base class for HpComputersFactory and DellComputersFactory which creates different type of computers
 
 Design pattern: Composite
-	* 
+	* SingleHardDrive and RaidArray are both HardDrive and RaidArray contains other HardDrives
 
 Design pattern: Mediator
 	* 

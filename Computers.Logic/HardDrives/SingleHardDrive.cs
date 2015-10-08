@@ -4,9 +4,9 @@
 
     public class SingleHardDrive : HardDrive
     {
-        private int capacity;
+        private Dictionary<int, string> data;
 
-        protected Dictionary<int, string> data;
+        private int capacity;
 
         public SingleHardDrive(int capacity)
         {

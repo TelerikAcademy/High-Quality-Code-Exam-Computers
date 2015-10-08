@@ -1,7 +1,7 @@
-﻿using Computers.Logic.VideoCards;
-
-namespace Computers.Logic.Cpus
+﻿namespace Computers.Logic.Cpus
 {
+    using Computers.Logic.VideoCards;
+
     public class Cpu128 : Cpu
     {
         public Cpu128(byte numberOfCores, Ram ram, VideoCard videoCard)

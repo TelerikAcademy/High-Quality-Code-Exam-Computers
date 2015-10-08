@@ -1,7 +1,7 @@
 ﻿namespace Computers.Logic.Cpus
 {
-    using VideoCards;
     using System;
+    using VideoCards;
 
     public abstract class Cpu
     {
@@ -21,7 +21,7 @@
 
         private byte NumberOfCores { get; set; }
 
-        internal void Rand(int a, int b)
+        public void Rand(int a, int b)
         {
             int randomNumber;
             do
