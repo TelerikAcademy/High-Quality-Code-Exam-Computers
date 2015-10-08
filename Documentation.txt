@@ -22,7 +22,7 @@ Found bottlenecks:
 
 Found bugs:
 	* When invalid command name is given the program does not output message "Invalid command!"
-	* 
+	* When "process" command is exectuted NullReferenceException is thrown
 	* 
 
 Single responsibility principle
