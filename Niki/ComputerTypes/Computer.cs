@@ -4,19 +4,19 @@
 
     public abstract class Computer
     {
-        protected IEnumerable<HardDriver> HardDrives { get; set; }
+        protected IEnumerable<HardDrive> HardDrives { get; set; }
 
-        protected HardDriver VideoCard { get; set; }
+        protected VideoCard VideoCard { get; set; }
 
         protected Cpu Cpu { get; set; }
 
-        protected Rammstein Ram { get; set; }
+        protected Ram Ram { get; set; }
 
         internal Computer(
             Cpu cpu,
-            Rammstein ram,
-            IEnumerable<HardDriver> hardDrives,
-            HardDriver videoCard)
+            Ram ram,
+            IEnumerable<HardDrive> hardDrives,
+            VideoCard videoCard)
         {
             this.Cpu = cpu;
             this.Ram = ram;

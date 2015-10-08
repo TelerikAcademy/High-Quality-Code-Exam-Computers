@@ -1,13 +1,13 @@
 ﻿namespace Computers.UI
 {
     using System;
-    using System.Collections.Generic;
 
-    class Computers
+    public static class Program
     {
         private static PersonalComputer pc;
         private static Laptop laptop;
         private static Server server;
+
         public static void Main()
         {
             CreateComputers();

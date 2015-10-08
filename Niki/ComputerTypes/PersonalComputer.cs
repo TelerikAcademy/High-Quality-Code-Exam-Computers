@@ -6,9 +6,9 @@
     {
         internal PersonalComputer(
             Cpu cpu,
-            Rammstein ram,
-            IEnumerable<HardDriver> hardDrives,
-            HardDriver videoCard)
+            Ram ram,
+            IEnumerable<HardDrive> hardDrives,
+            VideoCard videoCard)
             : base(cpu, ram, hardDrives, videoCard)
         {
         }

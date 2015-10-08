@@ -4,18 +4,19 @@
 
     public class Laptop : Computer
     {
+        private readonly LaptopBattery battery;
+
         internal Laptop(
             Cpu cpu,
-            Rammstein ram,
-            IEnumerable<HardDriver> hardDrives,
-            HardDriver videoCard,
+            Ram ram,
+            IEnumerable<HardDrive> hardDrives,
+            VideoCard videoCard,
             LaptopBattery battery)
             : base(cpu, ram, hardDrives, videoCard)
         {
             this.battery = battery;
         }
 
-        readonly LaptopBattery battery;
         internal void ChargeBattery(int percentage)
         {
             this.battery.Charge(percentage);

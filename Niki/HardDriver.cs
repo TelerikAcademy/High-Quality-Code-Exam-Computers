@@ -4,22 +4,20 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class HardDriver
+    public class HardDrive
     {
+        // TOOD: Composite?
+        List<HardDrive> hds;
 
         bool isInRaid;
 
         int hardDrivesInRaid;
 
-        SortedDictionary<int, string> info;
-
-        internal HardDriver() { }
-
-        public bool IsMonochrome { get; set; }
+        internal HardDrive()
+        {
+        }
         
-        List<HardDriver> hds;
-
-        internal HardDriver(int capacity, bool isInRaid, int hardDrivesInRaid)
+        internal HardDrive(int capacity, bool isInRaid, int hardDrivesInRaid)
         {
             this.isInRaid = isInRaid;
             this.hardDrivesInRaid = hardDrivesInRaid;
@@ -27,19 +25,19 @@
             this.capacity = capacity;
             this.data = new Dictionary<int, string>(capacity);
 
-            this.hds = new List<HardDriver>();
+            this.hds = new List<HardDrive>();
         }
 
         int capacity;
         Dictionary<int, string> data;
-        internal HardDriver(int capacity, bool isInRaid, int hardDrivesInRaid, List<HardDriver> hardDrives)
+        internal HardDrive(int capacity, bool isInRaid, int hardDrivesInRaid, List<HardDrive> hardDrives)
         {
             this.isInRaid = isInRaid;
             this.hardDrivesInRaid = hardDrivesInRaid;
             this.capacity = capacity;
 
             this.data = new Dictionary<int, string>(capacity);
-            this.hds = new List<HardDriver>();
+            this.hds = new List<HardDrive>();
             this.hds = hardDrives;
         }
         int Capacity
@@ -88,21 +86,6 @@
             else
             {
                 return this.data[address];
-            }
-        }
-        public void Draw(string a)
-        {
-            if (this.IsMonochrome)
-            {
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine(a);
-                Console.ResetColor();
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(a);
-                Console.ResetColor();
             }
         }
     }

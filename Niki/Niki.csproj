@@ -55,9 +55,10 @@
     <Compile Include="Manufacturers\DellComputersFactory.cs" />
     <Compile Include="Manufacturers\HpComputersFactory.cs" />
     <Compile Include="Manufacturers\IComputersFactory.cs" />
-    <Compile Include="Rammstein.cs" />
+    <Compile Include="Ram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoCard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

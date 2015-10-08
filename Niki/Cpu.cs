@@ -6,13 +6,14 @@
     {
         private readonly byte numberOfBits;
 
-        private readonly Rammstein ram;
+        private readonly Ram ram;
 
-        private readonly HardDriver videoCard;
+        private readonly VideoCard videoCard;
 
         static readonly Random Random = new Random();
 
-        internal Cpu(byte numberOfCores, byte numberOfBits, Rammstein ram, HardDriver videoCard)
+        // TODO: Should CPU to know about RAM and VideoCard
+        internal Cpu(byte numberOfCores, byte numberOfBits, Ram ram, VideoCard videoCard)
         {
             this.numberOfBits = numberOfBits;
             this.ram = ram;
@@ -60,6 +61,7 @@
             var data = this.ram.LoadValue();
             if (data < 0)
             {
+                // TODO: NullReference?
                 this.videoCard.Draw("Number too low.");
             }
             else if (data > 1000)
