@@ -52,9 +52,11 @@
     <Compile Include="HardDrives\HardDrive.cs" />
     <Compile Include="HardDrives\RaidArray.cs" />
     <Compile Include="HardDrives\SingleHardDrive.cs" />
+    <Compile Include="ILaptopBattery.cs" />
     <Compile Include="IMotherboard.cs" />
     <Compile Include="IMotherboardComponent.cs" />
     <Compile Include="InvalidArgumentException.cs" />
+    <Compile Include="IRam.cs" />
     <Compile Include="LaptopBattery.cs" />
     <Compile Include="Manufacturers\DellComputersFactory.cs" />
     <Compile Include="Manufacturers\HpComputersFactory.cs" />

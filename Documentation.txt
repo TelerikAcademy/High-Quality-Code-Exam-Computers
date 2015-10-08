@@ -2,7 +2,9 @@ Design pattern: Simple Factory
 	* In Program class, method CreateComputers is simple factory creating different type of IComputersFactory based on user input
 
 Design pattern: Strategy
-	* 
+	* In Laptop constructor the battery can vary
+	* Cpu can work with any IMotherboard components
+	* In Computer constructor IRam can vary
 
 Design pattern: Template Method
 	* Cpu has method SquareNumber which uses the abstract method GetMaxValue which is implemented in Cpu32, Cpu64 and Cpu128

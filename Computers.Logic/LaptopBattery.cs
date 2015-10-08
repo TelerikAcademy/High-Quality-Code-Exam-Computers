@@ -1,6 +1,6 @@
 ﻿namespace Computers.Logic
 {
-    public class LaptopBattery
+    public class LaptopBattery : ILaptopBattery
     {
         public LaptopBattery()
         {
@@ -9,9 +9,9 @@
 
         public int Percentage { get; set; }
 
-        public void Charge(int p)
+        public void Charge(int percentage)
         {
-            this.Percentage += p;
+            this.Percentage += percentage;
             if (this.Percentage > 100)
             {
                 this.Percentage = 100;

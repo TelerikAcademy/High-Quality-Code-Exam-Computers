@@ -5,14 +5,14 @@
 
     public class Motherboard : IMotherboard
     {
-        public Motherboard(Cpu cpu, Ram ram, VideoCard videoCard)
+        public Motherboard(Cpu cpu, IRam ram, VideoCard videoCard)
         {
             cpu.AttachTo(this);
             this.Ram = ram;
             this.VideoCard = videoCard;
         }
 
-        private Ram Ram { get; set; }
+        private IRam Ram { get; set; }
 
         private VideoCard VideoCard { get; set; }
 

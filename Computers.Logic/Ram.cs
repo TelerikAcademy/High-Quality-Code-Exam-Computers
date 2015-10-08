@@ -1,15 +1,15 @@
 ﻿namespace Computers.Logic
 {
-    public class Ram
+    public class Ram : IRam
     {
         private int value;
 
-        internal Ram(int a)
+        public Ram(int a)
         {
             this.Amount = a;
         }
 
-        private int Amount { get; set; }
+        public int Amount { get; private set; }
 
         public void SaveValue(int newValue)
         {
