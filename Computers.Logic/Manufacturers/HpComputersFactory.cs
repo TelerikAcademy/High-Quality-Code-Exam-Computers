@@ -1,5 +1,6 @@
-﻿namespace Computers.UI
+﻿namespace Computers.Logic.Manufacturers
 {
+    using ComputerTypes;
     using System.Collections.Generic;
 
     public class HpComputersFactory : IComputersFactory

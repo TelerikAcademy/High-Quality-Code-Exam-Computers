@@ -1,4 +1,4 @@
-﻿namespace Computers.UI
+﻿namespace Computers.Logic
 {
     public interface IMotherboard
     {

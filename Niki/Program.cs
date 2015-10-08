@@ -2,6 +2,10 @@
 {
     using System;
 
+    using Logic.ComputerTypes;
+    using Logic;
+    using Logic.Manufacturers;
+
     public static class Program
     {
         private static PersonalComputer pc;

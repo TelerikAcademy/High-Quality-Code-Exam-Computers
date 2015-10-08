@@ -1,4 +1,4 @@
-﻿namespace Computers.UI
+﻿namespace Computers.Logic
 {
     using System;
     using System.Collections.Generic;
