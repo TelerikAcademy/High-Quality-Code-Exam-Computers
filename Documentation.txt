@@ -20,13 +20,13 @@ Design pattern: Mediator
 
 Found bottlenecks:
 	* In Cpu.Rand getting random number is in while loop which slows down the operation
-	* 
+	* SquareNumber uses for loop for squaring the number
 
 Found bugs:
 	* When invalid command name is given the program does not output message "Invalid command!"
 	* When "process" command is exectuted NullReferenceException is thrown
 	* System.Collections.Generic.dll with single class was referenced in out assembly
-	* 
+	* When printing battery status the "%" sign was missing
 
 Single responsibility principle
 	* 

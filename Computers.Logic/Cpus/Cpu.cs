@@ -44,12 +44,7 @@
             }
             else
             {
-                int value = 0;
-                for (int i = 0; i < data; i++)
-                {
-                    value += data;
-                }
-
+                int value = data * data;
                 this.motherboard.DrawOnVideoCard(string.Format(SquareInfoStringFormat, data, value));
             }
         }
