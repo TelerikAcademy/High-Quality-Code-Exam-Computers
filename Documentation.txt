@@ -1,5 +1,5 @@
 Design pattern: Simple Factory
-	* In Program class, method CreateComputers is simple factory creating different type of IComputersFactory based on user input
+	* In ManufacturerFactory class, method GetManufacturer is simple factory creating different type of IComputersFactory based on given string
 
 Design pattern: Strategy
 	* In Laptop constructor the battery can vary
@@ -19,7 +19,7 @@ Design pattern: Mediator
 	* Motherboard is mediator for all computer components (e.g. CPU)
 
 Found bottlenecks:
-	* 
+	* In Cpu.Rand getting random number is in while loop which slows down the operation
 	* 
 
 Found bugs:

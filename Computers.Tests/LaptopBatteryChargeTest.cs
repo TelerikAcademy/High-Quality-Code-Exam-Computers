@@ -19,9 +19,9 @@
         public void ChargeShouldNotAddToPercentageWhenGivenPositiveNumberAndCurrentPercentageIs100()
         {
             var battery = new LaptopBattery();
-            battery.Percentage = 100;
+            battery.Percentage = LaptopBattery.MaxBatteryPercentage;
             battery.Charge(10);
-            Assert.AreEqual(100, battery.Percentage);
+            Assert.AreEqual(LaptopBattery.MaxBatteryPercentage, battery.Percentage);
         }
 
         [TestMethod]
@@ -37,9 +37,9 @@
         public void ChargeShouldNotSubstractFromPercentageWhenGivenNegativeNumberAndCurrentPercentageIsZero()
         {
             var battery = new LaptopBattery();
-            battery.Percentage = 0;
+            battery.Percentage = LaptopBattery.MinBatteryPercentage;
             battery.Charge(-10);
-            Assert.AreEqual(0, battery.Percentage);
+            Assert.AreEqual(LaptopBattery.MinBatteryPercentage, battery.Percentage);
         }
 
         [TestMethod]

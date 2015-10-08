@@ -8,6 +8,7 @@
 
     public class HpComputersFactory : IComputersFactory
     {
+        public const string Name = "HP";
         public Laptop CreateLaptop()
         {
             var laptop = new Laptop(

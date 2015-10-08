@@ -6,6 +6,8 @@
 
     public class RaidArray : HardDrive
     {
+        const string HardDisksNotAvailableMessage =
+            "No hard drive in the RAID array!";
         private List<HardDrive> hardDrives;
 
         internal RaidArray(List<HardDrive> hardDrives)
@@ -30,7 +32,8 @@
         {
             if (!this.hardDrives.Any())
             {
-                throw new OutOfMemoryException("No hard drive in the RAID array!");
+                // TODO: WTF?
+                throw new OutOfMemoryException(HardDisksNotAvailableMessage);
             }
 
             return this.hardDrives.First().LoadData(address);

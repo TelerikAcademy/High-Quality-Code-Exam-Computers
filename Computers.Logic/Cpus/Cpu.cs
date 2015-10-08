@@ -5,11 +5,14 @@
 
     public abstract class Cpu : IMotherboardComponent
     {
+        private const string NumberTooHighMessage = "Number too high.";
+        private const string NumberTooLowMessage = "Number too low.";
+        private const string SquareInfoStringFormat = "Square of {0} is {1}.";
+
         private static readonly Random Random = new Random();
 
         private IMotherboard motherboard;
 
-        // TODO: Should CPU to know about RAM and VideoCard
         internal Cpu(byte numberOfCores)
         {
             this.NumberOfCores = numberOfCores;
@@ -24,12 +27,7 @@
 
         public void Rand(int a, int b)
         {
-            int randomNumber;
-            do
-            {
-                randomNumber = Random.Next(0, 1000);
-            }
-            while (!(randomNumber >= a && randomNumber <= b));
+            int randomNumber = Random.Next(a, b + 1);
             this.motherboard.SaveRamValue(randomNumber);
         }
 
@@ -38,11 +36,11 @@
             var data = this.motherboard.LoadRamValue();
             if (data < 0)
             {
-                this.motherboard.DrawOnVideoCard("Number too low.");
+                this.motherboard.DrawOnVideoCard(NumberTooLowMessage);
             }
             else if (data > this.GetMaxValue())
             {
-                this.motherboard.DrawOnVideoCard("Number too high.");
+                this.motherboard.DrawOnVideoCard(NumberTooHighMessage);
             }
             else
             {
@@ -52,7 +50,7 @@
                     value += data;
                 }
 
-                this.motherboard.DrawOnVideoCard(string.Format("Square of {0} is {1}.", data, value));
+                this.motherboard.DrawOnVideoCard(string.Format(SquareInfoStringFormat, data, value));
             }
         }
 

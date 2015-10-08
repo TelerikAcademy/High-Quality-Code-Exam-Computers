@@ -2,12 +2,17 @@
 {
     using System;
 
-    using Logic;
     using Logic.ComputerTypes;
     using Logic.Manufacturers;
 
     public static class Program
     {
+        private const string InvalidCommandMessage = "Invalid command!";
+        private const string ExitCommandName = "Exit";
+        private const string ChargeCommandName = "Charge";
+        private const string ProcessCommandName = "Process";
+        private const string PlayCommandName = "Play";
+
         private static PersonalComputer pc;
         private static Laptop laptop;
         private static Server server;
@@ -20,25 +25,11 @@
 
         private static void CreateComputers()
         {
-            var manufacturer = Console.ReadLine();
-            IComputersFactory computerFactory;
-            if (manufacturer == "HP")
-            {
-                computerFactory = new HpComputersFactory();
-            }
-            else if (manufacturer == "Dell")
-            {
-                computerFactory = new DellComputersFactory();
-            }
-            else if (manufacturer == "Lenovo")
-            {
-                computerFactory = new LenovoComputersFactory();
-            }
-            else
-            {
-                // TODO: Exception?
-                throw new InvalidArgumentException("Invalid manufacturer!");
-            }
+            var manufacturerFactory = new ManufacturerFactory();
+
+            var manufacturerName = Console.ReadLine();
+            IComputersFactory computerFactory =
+                manufacturerFactory.GetManufacturer(manufacturerName);
 
             pc = computerFactory.CreatePersonalComputer();
             laptop = computerFactory.CreateLaptop();
@@ -47,6 +38,7 @@
 
         private static void ProcessCommands()
         {
+            // TODO: Command design pattern
             while (true)
             {
                 var c = Console.ReadLine();
@@ -55,7 +47,7 @@
                     break;
                 }
 
-                if (c.StartsWith("Exit"))
+                if (c.StartsWith(ExitCommandName))
                 {
                     break;
                 }
@@ -63,27 +55,27 @@
                 var cp = c.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 if (cp.Length != 2)
                 {
-                    throw new ArgumentException("Invalid command!");
+                    throw new ArgumentException(InvalidCommandMessage);
                 }
 
                 var commandName = cp[0];
                 var commandArgument = int.Parse(cp[1]);
 
-                if (commandName == "Charge")
+                if (commandName == ChargeCommandName)
                 {
                     laptop.ChargeBattery(commandArgument);
                 }
-                else if (commandName == "Process")
+                else if (commandName == ProcessCommandName)
                 {
                     server.Process(commandArgument);
                 }
-                else if (commandName == "Play")
+                else if (commandName == PlayCommandName)
                 {
                     pc.Play(commandArgument);
                 }
                 else
                 {
-                    Console.WriteLine("Invalid command!");
+                    Console.WriteLine(InvalidCommandMessage);
                 }
             }
         }
