@@ -13,6 +13,10 @@
 
         int hardDrivesInRaid;
 
+        int capacity;
+
+        Dictionary<int, string> data;
+
         internal HardDrive()
         {
         }
@@ -28,8 +32,6 @@
             this.hds = new List<HardDrive>();
         }
 
-        int capacity;
-        Dictionary<int, string> data;
         internal HardDrive(int capacity, bool isInRaid, int hardDrivesInRaid, List<HardDrive> hardDrives)
         {
             this.isInRaid = isInRaid;
