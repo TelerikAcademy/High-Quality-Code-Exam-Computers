@@ -52,6 +52,9 @@
     <Compile Include="IMotherboard.cs" />
     <Compile Include="InvalidArgumentException.cs" />
     <Compile Include="LaptopBattery.cs" />
+    <Compile Include="Manufacturers\DellComputersFactory.cs" />
+    <Compile Include="Manufacturers\HpComputersFactory.cs" />
+    <Compile Include="Manufacturers\IComputersFactory.cs" />
     <Compile Include="Rammstein.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

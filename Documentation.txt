@@ -1,5 +1,5 @@
 Design pattern: Simple Factory
-	* 
+	* In Program class, method CreateComputers is simple factory creating different type of IComputersFactory based on user input
 
 Design pattern: Strategy
 	* 
@@ -8,7 +8,7 @@ Design pattern: Template Method
 	* 
 
 Design pattern: Abstract factory
-	* 
+	* Introduced IComputersFactory as a base class for HpComputersFactory and DellComputersFactory which creates different type of computers
 
 Design pattern: Composite
 	* 
@@ -21,7 +21,7 @@ Found bottlenecks:
 	* 
 
 Found bugs:
-	* 
+	* When invalid command name is given the program does not output message "Invalid command!"
 	* 
 	* 
 
