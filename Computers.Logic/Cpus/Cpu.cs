@@ -1,46 +1,24 @@
-﻿namespace Computers.Logic
+﻿namespace Computers.Logic.Cpus
 {
     using System;
 
-    public class Cpu
+    public abstract class Cpu
     {
         private static readonly Random Random = new Random();
-
-        private readonly byte numberOfBits;
 
         private readonly Ram ram;
 
         private readonly VideoCard videoCard;
 
         // TODO: Should CPU to know about RAM and VideoCard
-        internal Cpu(byte numberOfCores, byte numberOfBits, Ram ram, VideoCard videoCard)
+        internal Cpu(byte numberOfCores, Ram ram, VideoCard videoCard)
         {
-            this.numberOfBits = numberOfBits;
             this.ram = ram;
             this.NumberOfCores = numberOfCores;
             this.videoCard = videoCard;
         }
 
         private byte NumberOfCores { get; set; }
-        
-        public void SquareNumber()
-        {
-            // TODO: Extract in separate classes
-            if (this.numberOfBits == 32)
-            {
-                this.SquareNumber(500);
-            }
-
-            if (this.numberOfBits == 64)
-            {
-                this.SquareNumber(1000);
-            }
-
-            if (this.numberOfBits == 128)
-            {
-                this.SquareNumber(2000);
-            }
-        }
 
         internal void Rand(int a, int b)
         {
@@ -53,14 +31,14 @@
             this.ram.SaveValue(randomNumber);
         }
 
-        private void SquareNumber(int maxValue)
+        public void SquareNumber()
         {
             var data = this.ram.LoadValue();
             if (data < 0)
             {
                 this.videoCard.Draw("Number too low.");
             }
-            else if (data > maxValue)
+            else if (data > this.GetMaxValue())
             {
                 this.videoCard.Draw("Number too high.");
             }
@@ -75,5 +53,7 @@
                 this.videoCard.Draw(string.Format("Square of {0} is {1}.", data, value));
             }
         }
+
+        protected abstract int GetMaxValue();
     }
 }

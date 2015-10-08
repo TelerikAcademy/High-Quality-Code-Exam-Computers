@@ -1,5 +1,6 @@
 ﻿namespace Computers.Logic.ComputerTypes
 {
+    using Cpus;
     using System.Collections.Generic;
 
     public class Laptop : Computer

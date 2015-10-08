@@ -45,7 +45,10 @@
     <Compile Include="ComputerTypes\Laptop.cs" />
     <Compile Include="ComputerTypes\PersonalComputer.cs" />
     <Compile Include="ComputerTypes\Server.cs" />
-    <Compile Include="Cpu.cs" />
+    <Compile Include="Cpus\Cpu.cs" />
+    <Compile Include="Cpus\Cpu32.cs" />
+    <Compile Include="Cpus\Cpu64.cs" />
+    <Compile Include="Cpus\Cpu128.cs" />
     <Compile Include="HardDriver.cs" />
     <Compile Include="IMotherboard.cs" />
     <Compile Include="InvalidArgumentException.cs" />
