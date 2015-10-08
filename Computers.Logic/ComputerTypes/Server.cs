@@ -14,7 +14,7 @@
             this.VideoCard.IsMonochrome = true;
         }
 
-        internal void Process(int data)
+        public void Process(int data)
         {
             this.Ram.SaveValue(data);
 
