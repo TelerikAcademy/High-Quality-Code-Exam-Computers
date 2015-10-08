@@ -26,6 +26,10 @@
             {
                 computerFactory = new DellComputersFactory();
             }
+            else if (manufacturer == "Lenovo")
+            {
+                computerFactory = new LenovoComputersFactory();
+            }
             else
             {
                 // TODO: Exception?

@@ -37,9 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Collections.Generic">
-      <HintPath>Properties\System.Collections.Generic.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +52,7 @@
     <Compile Include="Manufacturers\DellComputersFactory.cs" />
     <Compile Include="Manufacturers\HpComputersFactory.cs" />
     <Compile Include="Manufacturers\IComputersFactory.cs" />
+    <Compile Include="Manufacturers\LenovoComputersFactory.cs" />
     <Compile Include="Ram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

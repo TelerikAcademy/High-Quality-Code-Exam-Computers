@@ -34,6 +34,10 @@
             {
                 this.SquareNumber(1000);
             }
+            if (this.numberOfBits == 128)
+            {
+                this.SquareNumber(2000);
+            }
         }
 
         private void SquareNumber(int maxValue)
