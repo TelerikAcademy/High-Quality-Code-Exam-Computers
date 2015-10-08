@@ -7,7 +7,7 @@
     <ProjectGuid>{920382DC-166F-4C55-8AF7-70D668191107}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Computers.UI.Console</RootNamespace>
+    <RootNamespace>Computers.UI</RootNamespace>
     <AssemblyName>Computers.UI.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -43,17 +43,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Computer.cs" />
+    <Compile Include="ComputerTypes\Computer.cs" />
+    <Compile Include="ComputerTypes\Laptop.cs" />
+    <Compile Include="ComputerTypes\PersonalComputer.cs" />
+    <Compile Include="ComputerTypes\Server.cs" />
     <Compile Include="Cpu.cs" />
     <Compile Include="HardDriver.cs" />
     <Compile Include="IMotherboard.cs" />
     <Compile Include="InvalidArgumentException.cs" />
-    <Compile Include="Laptop.cs" />
     <Compile Include="LaptopBattery.cs" />
     <Compile Include="Rammstein.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Type.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

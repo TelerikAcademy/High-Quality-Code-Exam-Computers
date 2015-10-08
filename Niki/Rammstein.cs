@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI
 {
-    class Rammstein
+    public class Rammstein
     {
         int value;
         internal Rammstein(int a)

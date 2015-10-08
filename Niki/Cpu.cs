@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Cpu
+    public class Cpu
     {
         private readonly byte numberOfBits;
 
