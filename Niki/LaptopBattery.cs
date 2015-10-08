@@ -1,4 +1,4 @@
-﻿namespace Computers3
+﻿namespace Computers.UI
 {
     class LaptopBattery
     {
