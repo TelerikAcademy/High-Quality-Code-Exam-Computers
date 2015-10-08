@@ -29,7 +29,7 @@ namespace Computers11
 
 
             this.capacity = capacity;
-            this.data = new Dictionary<int, string(capacity);
+            this.data = new Dictionary<int, string>(capacity);
 
 
 
@@ -48,7 +48,7 @@ namespace Computers11
         {
             this.isInRaid = isInRaid;
             this.hardDrivesInRaid = hardDrivesInRaid;
-            this.capacity = capacity
+            this.capacity = capacity;
 
 
             this.data = (Dictionary<int, string>)new Dictionary<int, string>(capacity);this.hds = new List<HardDriver>();this.hds = hardDrives;
