@@ -7,15 +7,15 @@
     public class HardDrive
     {
         // TOOD: Composite?
-        List<HardDrive> hds;
+        private List<HardDrive> hds;
 
-        bool isInRaid;
+        private bool isInRaid;
 
-        int hardDrivesInRaid;
+        private int hardDrivesInRaid;
 
-        int capacity;
+        private int capacity;
 
-        Dictionary<int, string> data;
+        private Dictionary<int, string> data;
 
         internal HardDrive()
         {
@@ -42,7 +42,8 @@
             this.hds = new List<HardDrive>();
             this.hds = hardDrives;
         }
-        int Capacity
+
+        private int Capacity
         {
             get
             {
@@ -52,6 +53,7 @@
                     {
                         return 0;
                     }
+
                     return this.hds.First().Capacity;
                 }
                 else
@@ -60,7 +62,8 @@
                 }
             }
         }
-        void SaveData(int addr, string newData)
+
+        public void SaveData(int addr, string newData)
         {
             if (this.isInRaid)
             {
@@ -74,7 +77,8 @@
                 this.data[addr] = newData;
             }
         }
-        string LoadData(int address)
+
+        private string LoadData(int address)
         {
             if (this.isInRaid)
             {

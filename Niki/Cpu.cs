@@ -4,13 +4,13 @@
 
     public class Cpu
     {
+        private static readonly Random Random = new Random();
+
         private readonly byte numberOfBits;
 
         private readonly Ram ram;
 
         private readonly VideoCard videoCard;
-
-        static readonly Random Random = new Random();
 
         // TODO: Should CPU to know about RAM and VideoCard
         internal Cpu(byte numberOfCores, byte numberOfBits, Ram ram, VideoCard videoCard)
@@ -21,8 +21,8 @@
             this.videoCard = videoCard;
         }
 
-        byte NumberOfCores { get; set; }
-
+        private byte NumberOfCores { get; set; }
+        
         public void SquareNumber()
         {
             // TODO: Extract in separate classes
@@ -30,14 +30,27 @@
             {
                 this.SquareNumber(500);
             }
+
             if (this.numberOfBits == 64)
             {
                 this.SquareNumber(1000);
             }
+
             if (this.numberOfBits == 128)
             {
                 this.SquareNumber(2000);
             }
+        }
+
+        internal void Rand(int a, int b)
+        {
+            int randomNumber;
+            do
+            {
+                randomNumber = Random.Next(0, 1000);
+            }
+            while (!(randomNumber >= a && randomNumber <= b));
+            this.ram.SaveValue(randomNumber);
         }
 
         private void SquareNumber(int maxValue)
@@ -58,20 +71,9 @@
                 {
                     value += data;
                 }
+
                 this.videoCard.Draw(string.Format("Square of {0} is {1}.", data, value));
             }
         }
-
-        internal void rand(int a, int b)
-        {
-            int randomNumber;
-            do
-            {
-                randomNumber = Random.Next(0, 1000);
-            }
-            while (!(randomNumber >= a && randomNumber <= b));
-            this.ram.SaveValue(randomNumber);
-        }
     }
-
 }

@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI
 {
-    interface IMotherboard
+    public interface IMotherboard
     {
         /// <summary>
         /// Loads value from the RAM

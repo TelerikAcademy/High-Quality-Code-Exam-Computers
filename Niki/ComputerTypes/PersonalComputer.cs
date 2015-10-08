@@ -15,7 +15,7 @@
 
         public void Play(int guessNumber)
         {
-            Cpu.rand(1, 10);
+            Cpu.Rand(1, 10);
             var number = this.Ram.LoadValue();
             if (number + 1 != guessNumber + 1)
             {
