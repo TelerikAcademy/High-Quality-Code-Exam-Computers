@@ -41,25 +41,25 @@
             // TODO: Command design pattern
             while (true)
             {
-                var c = Console.ReadLine();
-                if (c == null)
+                var userInput = Console.ReadLine();
+                if (userInput == null)
                 {
                     break;
                 }
 
-                if (c.StartsWith(ExitCommandName))
+                if (userInput.StartsWith(ExitCommandName))
                 {
                     break;
                 }
 
-                var cp = c.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                if (cp.Length != 2)
+                var commandParts = userInput.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                if (commandParts.Length != 2)
                 {
                     throw new ArgumentException(InvalidCommandMessage);
                 }
 
-                var commandName = cp[0];
-                var commandArgument = int.Parse(cp[1]);
+                var commandName = commandParts[0];
+                var commandArgument = int.Parse(commandParts[1]);
 
                 if (commandName == ChargeCommandName)
                 {

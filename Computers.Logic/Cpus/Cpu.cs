@@ -25,9 +25,9 @@
             this.motherboard = motherboard;
         }
 
-        public void Rand(int a, int b)
+        public void Rand(int minValue, int maxValue)
         {
-            int randomNumber = Random.Next(a, b + 1);
+            int randomNumber = Random.Next(minValue, maxValue + 1);
             this.motherboard.SaveRamValue(randomNumber);
         }
 

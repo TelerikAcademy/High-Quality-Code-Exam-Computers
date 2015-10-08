@@ -4,7 +4,7 @@
     {
         public abstract int Capacity { get; }
 
-        public abstract void SaveData(int addr, string newData);
+        public abstract void SaveData(int address, string newData);
 
         public abstract string LoadData(int address);
     }

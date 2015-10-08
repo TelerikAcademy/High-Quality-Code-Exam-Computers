@@ -39,11 +39,11 @@
             return this.hardDrives.First().LoadData(address);
         }
 
-        public override void SaveData(int addr, string newData)
+        public override void SaveData(int address, string newData)
         {
             foreach (var hardDrive in this.hardDrives)
             {
-                hardDrive.SaveData(addr, newData);
+                hardDrive.SaveData(address, newData);
             }
         }
     }

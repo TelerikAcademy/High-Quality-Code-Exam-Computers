@@ -6,11 +6,11 @@
     {
         public bool IsMonochrome { get; internal set; }
 
-        public void Draw(string a)
+        public void Draw(string textMessage)
         {
             var color = this.GetColor();
             Console.ForegroundColor = color;
-            Console.WriteLine(a);
+            Console.WriteLine(textMessage);
             Console.ResetColor();
         }
 
