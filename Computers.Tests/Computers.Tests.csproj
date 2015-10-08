@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CpuRandTests.cs" />
     <Compile Include="CpuSquareNumberTests.cs" />
     <Compile Include="LaptopBatteryChargeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
