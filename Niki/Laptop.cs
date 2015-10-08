@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Computers.UI
+﻿namespace Computers.UI
 {
     class Laptop
     {
+        // TODO: Middle man?
         private static void Main()
         {
             Computers computers = new Computers();

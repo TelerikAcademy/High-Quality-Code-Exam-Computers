@@ -1,8 +1,8 @@
-﻿
-using System;
-using System.Collections.Generic;
-namespace Computers.UI
+﻿namespace Computers.UI
 {
+    using System;
+    using System.Collections.Generic;
+
     class Computers
     {
         static Computer pc, laptop, server;
@@ -22,15 +22,15 @@ namespace Computers.UI
                     new Cpu(Eight / 2,
                         32, serverRam, serverVideo),
                     serverRam,
-                    new List<HardDriver>{
+                    new List<HardDriver>
+                    {
                             new HardDriver(0, true, 2, new List<HardDriver> { new HardDriver(1000, false, 0), new HardDriver(1000, false, 0) })
-                        },
-                        serverVideo, null);
+                    },
+                    serverVideo, null);
                 {
                     var card = new HardDriver()
                     {
-                        IsMonochrome
-                        = false
+                        IsMonochrome = false
                     };
                     var ram1 = new Rammstein(Eight / 2);
                     laptop = new Computer(
@@ -39,8 +39,7 @@ namespace Computers.UI
                         ram1,
                         new[]
                             {
-                                new HardDriver(500,
-                                    false, 0)
+                                new HardDriver(500, false, 0)
                             },
                         card,
                         new LaptopBattery());
@@ -48,15 +47,20 @@ namespace Computers.UI
             }
             else if (manufacturer == "Dell")
             {
-                var ram = new Rammstein(Eight); var videoCard = new HardDriver() { IsMonochrome = false };
+                var ram = new Rammstein(Eight);
+                var videoCard = new HardDriver() { IsMonochrome = false };
                 pc = new Computer(ComputerType.PC, new Cpu(Eight / 2, 64, ram, videoCard), ram, new[] { new HardDriver(1000, false, 0) }, videoCard, null);
                 var ram1 = new Rammstein(Eight * Eight);
-                var card = new HardDriver(); server = new Computer(ComputerType.SERVER,
+                var card = new HardDriver();
+                server = new Computer(ComputerType.SERVER,
                      new Cpu(Eight, 64, ram1, card),
                      ram1,
-                     new List<HardDriver>{
+                     new List<HardDriver> {
                             new HardDriver(0, true, 2, new List<HardDriver> { new HardDriver(2000, false, 0), new HardDriver(2000, false, 0) })
-                         }, card, null); var ram2 = new Rammstein(Eight); var videoCard1 = new HardDriver() { IsMonochrome = false };
+                         }, card, null); var ram2 = new Rammstein(Eight); var videoCard1 = new HardDriver()
+                         {
+                             IsMonochrome = false
+                         };
                 laptop = new Computer(ComputerType.LAPTOP,
                     new Cpu(Eight / 2, ((32)), ram2, videoCard1),
                     ram2,
@@ -65,7 +69,10 @@ namespace Computers.UI
 
                     new LaptopBattery());
             }
-            else { throw new InvalidArgumentException("Invalid manufacturer!"); }
+            else
+            {
+                throw new InvalidArgumentException("Invalid manufacturer!");
+            }
             while (1 == 1)
             {
                 var c = Console.ReadLine();
@@ -78,18 +85,27 @@ namespace Computers.UI
                         throw new ArgumentException("Invalid command!");
                     }
                 }
-#warning "This code sucks"
+
                 var cn = cp[0];
                 var ca = int.Parse(cp[1]);
 
+                if (cn == "Charge")
+                {
+                    laptop.ChargeBattery(ca);
+                }
+                else if (cn == "Process")
+                {
+                    server.Process(ca);
+                }
+                else if (cn == "Play")
+                {
+                    pc.Play(ca);
+                }
 
-
-                if (cn == "Charge") laptop.ChargeBattery(ca);
-                else if (cn == "Process") server.Process(ca);
-                else if (cn == "Play") pc.Play(ca); ;
                 continue; Console.WriteLine("Invalid command!");
             }
 
+            // TODO: Remove?
         end:
             ;
         }

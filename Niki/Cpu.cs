@@ -1,6 +1,6 @@
-﻿using System;
-namespace Computers.UI
+﻿namespace Computers.UI
 {
+    using System;
 
     class Cpu
     {
@@ -23,11 +23,17 @@ namespace Computers.UI
 
         public void SquareNumber()
         {
-            if (this.numberOfBits == 32) SquareNumber32();
-            if (this.numberOfBits == 64) SquareNumber64();
+            if (this.numberOfBits == 32)
+            {
+                this.SquareNumber32();
+            }
+            if (this.numberOfBits == 64)
+            {
+                this.SquareNumber64();
+            }
         }
 
-        void SquareNumber32()
+        private void SquareNumber32()
         {
             var data = this.ram.LoadValue();
             if (data < 0)
@@ -49,7 +55,7 @@ namespace Computers.UI
             }
         }
 
-        void SquareNumber64()
+        private void SquareNumber64()
         {
             var data = this.ram.LoadValue();
             if (data < 0)
@@ -67,6 +73,7 @@ namespace Computers.UI
                 {
                     value += data;
                 }
+
                 this.videoCard.Draw(string.Format("Square of {0} is {1}.", data, value));
             }
         }
