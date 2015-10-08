@@ -6,8 +6,9 @@
 
     public class RaidArray : HardDrive
     {
-        const string HardDisksNotAvailableMessage =
+        private const string HardDisksNotAvailableMessage =
             "No hard drive in the RAID array!";
+
         private List<HardDrive> hardDrives;
 
         internal RaidArray(List<HardDrive> hardDrives)

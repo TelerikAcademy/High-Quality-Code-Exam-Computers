@@ -9,6 +9,7 @@
     {
         private const string WrongNumberStringFormat = "You didn't guess the number {0}.";
         private const string WinMessage = "You win!";
+
         internal PersonalComputer(
             Cpu cpu,
             Ram ram,

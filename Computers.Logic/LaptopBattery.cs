@@ -4,7 +4,8 @@
     {
         public const int MinBatteryPercentage = 0;
         public const int MaxBatteryPercentage = 100;
-        const int DefaultBatteryPercentage = 100 / 2;
+        private const int DefaultBatteryPercentage = 100 / 2;
+
         public LaptopBattery()
         {
             this.Percentage = DefaultBatteryPercentage;

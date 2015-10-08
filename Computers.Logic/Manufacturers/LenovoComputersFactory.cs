@@ -9,6 +9,7 @@
     public class LenovoComputersFactory : IComputersFactory
     {
         public const string Name = "Lenovo";
+
         public Laptop CreateLaptop()
         {
             var laptop = new Laptop(

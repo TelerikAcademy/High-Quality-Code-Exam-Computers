@@ -1,7 +1,7 @@
 ﻿namespace Computers.Logic
 {
-    using Cpus;
     using Computers.Logic.VideoCards;
+    using Cpus;
 
     public class Motherboard : IMotherboard
     {
