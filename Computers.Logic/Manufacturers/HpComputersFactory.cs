@@ -3,12 +3,13 @@
     using System.Collections.Generic;
     using ComputerTypes;
     using Cpus;
+    using VideoCards;
 
     public class HpComputersFactory : IComputersFactory
     {
         public Laptop CreateLaptop()
         {
-            var card = new VideoCard { IsMonochrome = false };
+            var card = new ColorfulVideoCard();
             var ram = new Ram(4);
             var laptop = new Laptop(
                 new Cpu64(2, ram, card),
@@ -22,7 +23,7 @@
         public PersonalComputer CreatePersonalComputer()
         {
             var ram = new Ram(2);
-            var videoCard = new VideoCard { IsMonochrome = false };
+            var videoCard = new ColorfulVideoCard();
             var pc = new PersonalComputer(
                 new Cpu32(2, ram, videoCard),
                 ram,
@@ -34,7 +35,7 @@
         public Server CreateServer()
         {
             var serverRam = new Ram(8 * 4);
-            var serverVideo = new VideoCard();
+            var serverVideo = new MonochromeVideoCard();
             var server = new Server(
                  new Cpu32(4, serverRam, serverVideo),
                  serverRam,

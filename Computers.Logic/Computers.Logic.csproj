@@ -59,7 +59,9 @@
     <Compile Include="Manufacturers\LenovoComputersFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ram.cs" />
-    <Compile Include="VideoCard.cs" />
+    <Compile Include="VideoCards\ColorfulVideoCard.cs" />
+    <Compile Include="VideoCards\MonochromeVideoCard.cs" />
+    <Compile Include="VideoCards\VideoCard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

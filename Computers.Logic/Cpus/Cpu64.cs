@@ -1,5 +1,7 @@
 ﻿namespace Computers.Logic.Cpus
 {
+    using Computers.Logic.VideoCards;
+
     public class Cpu64 : Cpu
     {
         public Cpu64(byte numberOfCores, Ram ram, VideoCard videoCard)

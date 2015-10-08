@@ -1,5 +1,6 @@
 ﻿namespace Computers.Logic.ComputerTypes
 {
+    using VideoCards;
     using Cpus;
     using System.Collections.Generic;
 

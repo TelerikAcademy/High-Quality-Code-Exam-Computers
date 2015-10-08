@@ -1,5 +1,6 @@
 ﻿namespace Computers.Logic.Cpus
 {
+    using VideoCards;
     using System;
 
     public abstract class Cpu

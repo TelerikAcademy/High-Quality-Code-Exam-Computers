@@ -1,4 +1,6 @@
-﻿namespace Computers.Logic.Cpus
+﻿using Computers.Logic.VideoCards;
+
+namespace Computers.Logic.Cpus
 {
     public class Cpu32 : Cpu
     {
