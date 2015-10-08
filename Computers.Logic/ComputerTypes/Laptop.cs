@@ -3,6 +3,7 @@
     using VideoCards;
     using Cpus;
     using System.Collections.Generic;
+    using HardDrives;
 
     public class Laptop : Computer
     {

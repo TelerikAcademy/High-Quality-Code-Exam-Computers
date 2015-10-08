@@ -4,6 +4,7 @@
     using ComputerTypes;
     using Cpus;
     using VideoCards;
+    using HardDrives;
 
     public class DellComputersFactory : IComputersFactory
     {
@@ -14,7 +15,7 @@
             var laptop = new Laptop(
                 new Cpu32(4, ram, videoCard),
                 ram,
-                new[] { new HardDrive(1000, false, 0) },
+                new[] { new SingleHardDrive(1000) },
                 videoCard,
                 new LaptopBattery());
             return laptop;
@@ -27,7 +28,7 @@
             var pc = new PersonalComputer(
                 new Cpu64(4, ram, videoCard),
                 ram,
-                new[] { new HardDrive(1000, false, 0) },
+                new[] { new SingleHardDrive(1000) },
                 videoCard);
             return pc;
         }
@@ -39,7 +40,7 @@
             var server = new Server(
                  new Cpu64(8, ram, card),
                  ram,
-                 new List<HardDrive> { new HardDrive(0, true, 2, new List<HardDrive> { new HardDrive(2000, false, 0), new HardDrive(2000, false, 0) }) },
+                 new List<HardDrive> { new RaidArray(new List<HardDrive> { new SingleHardDrive(2000), new SingleHardDrive(2000) }) },
                  card);
             return server;
         }
