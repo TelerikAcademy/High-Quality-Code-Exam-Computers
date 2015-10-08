@@ -2,14 +2,14 @@
 {
     public class LaptopBattery
     {
-        internal LaptopBattery()
+        public LaptopBattery()
         {
             this.Percentage = 100 / 2;
         }
 
-        internal int Percentage { get; set; }
+        public int Percentage { get; set; }
 
-        internal void Charge(int p)
+        public void Charge(int p)
         {
             this.Percentage += p;
             if (this.Percentage > 100)

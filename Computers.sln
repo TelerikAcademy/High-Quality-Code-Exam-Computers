@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Computers.UI", "Niki\Comput
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Computers.Logic", "Computers.Logic\Computers.Logic.csproj", "{0299A4C2-F905-4BBC-AD4B-3966544D1703}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Computers.Tests", "Computers.Tests\Computers.Tests.csproj", "{DE62B61B-E913-4D53-875C-03F5AA26BAE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0299A4C2-F905-4BBC-AD4B-3966544D1703}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0299A4C2-F905-4BBC-AD4B-3966544D1703}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0299A4C2-F905-4BBC-AD4B-3966544D1703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE62B61B-E913-4D53-875C-03F5AA26BAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE62B61B-E913-4D53-875C-03F5AA26BAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE62B61B-E913-4D53-875C-03F5AA26BAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE62B61B-E913-4D53-875C-03F5AA26BAE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
